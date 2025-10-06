@@ -1,0 +1,30 @@
+# Nombre de la aplicación
+spring.application.name=reservas-service
+
+# Puerto donde correrá (cámbialo si 8083 ya está ocupado)
+server.port=8083
+
+# Conexión H2 en memoria (útil para pruebas)
+spring.datasource.url=jdbc:h2:mem:reservasdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# H2 console (opcional) - acceder en /h2-console
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# Eureka (desactivado temporalmente para arrancar rápido)
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+
+# Evitar la verificación de compatibilidad Spring Cloud (si la usas)
+spring.cloud.compatibility-verifier.enabled=false
+
+# Logging mínimo
+logging.level.org.springframework=INFO
+logging.level.com.hotel.reservas=DEBUG
